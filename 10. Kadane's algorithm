@@ -1,0 +1,12 @@
+class Solution {
+    int maxSubarraySum(int[] arr) {
+        int curmax=arr[0];
+        int max=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            curmax=Math.max(arr[i],curmax+arr[i]);
+            max=Math.max(max,curmax);
+        }
+        return max;
+    }
+}
